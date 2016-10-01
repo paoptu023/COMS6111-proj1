@@ -14,9 +14,11 @@ def process_raw_query(raw_query):
 
 def compose_url(query):
     bing_url = 'https://api.datamarket.azure.com/Bing/Search/Web?Query='
-    for (term, freq) in query.items():
+    print type(query), query
+    for (term, freq) in query:
         bing_url += ('%27'+term)
     bing_url += "%27&$top=10&$format=json"
+    print bing_url
     return bing_url
 
 
@@ -49,8 +51,8 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = sys.argv[2].split()
-    query = process_raw_query(raw_query)
+    raw_query = sys.argv[2]
+    query = process_raw_query(raw_query).items()
     exp_precision = float(sys.argv[1])
     cur_precision = 0.01
     N = 10
@@ -59,7 +61,7 @@ if __name__ == "__main__":
         cur_url = compose_url(query)
         req = urllib2.Request(cur_url, headers=headers)
         resp = urllib2.urlopen(req).read()
-        new_query = query_form(query)
+        new_query = query_form.query_form(query)
         cur_precision = 0;
 
         for row in get_result(resp):
@@ -70,12 +72,15 @@ if __name__ == "__main__":
                 new_query.add_non_relevant_doc(row['Description'])
 
         cur_precision = float(cur_precision)/N
-        query = new_query.form_query()
+        if cur_precision == 0:
+            break;
+        else:
+            query = new_query.form_query()
 
     if cur_precision == 0:
-        print 'Below desired precision, but can no longer augment the query'
+        print 'Opps, something went wrong, consider another query'
     else:
-        print 'Satisfy the demanding precision'
+        print 'Achieved the required precision'
 
 
 
