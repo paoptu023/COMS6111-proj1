@@ -3,7 +3,7 @@ import pprint
 import operator
 
 query = {'a':0.1, 'b':0.5}
-relevant_set = {'a b c, y h', 'd e f','e e e'}
+relevant_set = {'a b c, y h', 'd e f', 'e e e'}
 non_relevant_set = {'i j k', 'e e e'}
 Dr = 0
 Dnr = 0
