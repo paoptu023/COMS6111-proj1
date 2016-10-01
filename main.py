@@ -2,6 +2,7 @@ import urllib2
 import base64
 import sys
 import query_form
+import json
 
 
 def compose_url(query):
@@ -14,7 +15,17 @@ def compose_url(query):
 
 def get_result(resp):
     # parse response to get all formatted result
-    result = {}
+    json_result = json.loads(resp)
+    result_list = json_result['d']['results']
+
+    result = []
+    for data in result_list:
+        row = {}
+        row['Url'] = data['Url']
+        row['Title'] = data['Title']
+        row['Description'] = data['Description']
+        row['Feedback'] = raw_input('Relevant (Y/N)?').lower()
+        result.append(row)
     return result
 
 
@@ -25,7 +36,7 @@ def print_result(rst):
         print '', key, ':', rst[key].encode("utf-8")
     print ']'
     print
-    feedback = raw_input('Relevant (Y/N)?')
+    
     print "You entered", feedback
     print ''
     return feedback
@@ -45,16 +56,14 @@ if __name__ == "__main__":
         cur_url = compose_url(query)
         req = urllib2.Request(cur_url, headers=headers)
         resp = urllib2.urlopen(req).read()
-
         new_query = query_form(query)
 
-        for (id, rst) in enumerate(get_result(resp)):
-            user_fb = print_result(rst)
-            if user_fb.lower() == 'y':
-                new_query.add_relevant_doc(rst['Description'])
+        for tuple in get_result(resp):
+            if tuple['Feedback'] == 'y':
+                new_query.add_relevant_doc(tuple['Description'])
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(rst['Description'])
+                new_query.add_non_relevant_doc(tuple['Description'])
 
         cur_precision = new_query.get_precision()
         query = new_query.form_query()
