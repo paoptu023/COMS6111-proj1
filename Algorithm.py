@@ -4,7 +4,7 @@ import operator
 
 query = {'a':0.1, 'b':0.5}
 relevant_set = {'a b c, y h', 'd e f', 'e e e'}
-non_relevant_set = {'i j k', 'e e e'}
+non_relevant_set = {'i j k'}
 Dr = 0
 Dnr = 0
 alpha = 1
@@ -18,6 +18,7 @@ N = 10
 docs = []
 
 docs = relevant_set.union(non_relevant_set)
+print len(docs)
 
 # count the frequency of each term
 for d in docs:

@@ -9,26 +9,21 @@ class query_form(object):
         self.relevant_set = {}
         self.non_relevant_set = {}
         self.query = query
-        self.Dr = 0
-        self.Dnr = 0
         self.alpha = 1
         self.beta = 1
         self.gamma = 1
 
     def add_relevant_doc(self, doc):
         self.relevant_set.add(doc)
-        self.Dr += 1
 
     def add_non_relevant_doc(self, doc):
         self.non_relevant_set.add(doc)
-        self.Dnr += 1
 
     def form_query(self):
         vectors = []
         df = {}
         total_tf = {}
         N = 10
-        docs = []
 
         docs = self.relevant_set.union(self.non_relevant_set)
 
@@ -98,6 +93,3 @@ class query_form(object):
 
         print 'new query : '
         pprint.pprint(self.query)
-
-    def get_precision(self):
-        return self.Dr/10.0
