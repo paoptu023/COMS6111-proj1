@@ -15,10 +15,10 @@ def process_raw_query(raw_query):
 
 
 def compose_url(query):
-    bing_url = 'https://api.datamarket.azure.com/Bing/Search/Web?Query='
+    bing_url = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27'
     print type(query), query
     for (term, freq) in query:
-        bing_url += ('%27'+term)
+        bing_url += '+'+term
     bing_url += '%27&$top=5&$format=json'
     print bing_url
     return bing_url
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = 'gates'#sys.argv[2]
+    raw_query = 'musk'#sys.argv[2]
     query = process_raw_query(raw_query).items()
     exp_precision = 0.8#float(sys.argv[1])
     cur_precision = 0.01
