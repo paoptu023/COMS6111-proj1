@@ -12,7 +12,7 @@ class query_form(object):
         self.query = query
         self.alpha = 1
         self.beta = 0.75
-        self.gamma = 0.3
+        self.gamma = 0.15
         f = open('stopwords.txt', 'r')
         self.stop_words = set()
         for word in f.read().split():
@@ -27,13 +27,12 @@ class query_form(object):
     def form_query(self):
         vectors = {}
         total_tf = {}
-        N = 10
-
         #docs = self.relevant_set.union(self.non_relevant_set)
         tf_r = {}
         tf_nr = {}
         df_r = {}
         df_nr = {}
+        N = 10
         # count the frequency of each term in relevant docs
         for d in self.relevant_set:
             d = re.sub('[^a-z\']+', ' ', d.lower())
@@ -85,10 +84,10 @@ class query_form(object):
             vectors[term] = (self.alpha * freq)
 
         for term in tf_r:
-            vectors[term] += self.beta *(float(tf_r[term]) / total_tf[term])*math.log(float(N) / df_r[term])
+            vectors[term] += self.beta *(float(tf_r[term]) / total_tf[term])*math.log(float(2*N)/df_r[term])
 
         for term in tf_nr:
-            vectors[term] -= self.gamma * (float(tf_nr[term]) / total_tf[term])*math.log(float(N) / df_nr[term])
+            vectors[term] -= self.gamma * (float(tf_nr[term]) / total_tf[term])*math.log(float(2*N)/df_nr[term])
 
         print 'weights :'
         pprint.pprint(vectors)
@@ -96,15 +95,15 @@ class query_form(object):
 
         q = {key: vectors[key] for key in vectors if vectors[key] > 0}
         new_q = sorted(q.items(), key=operator.itemgetter(1), reverse=True)
-        count = 0
 
+        dict_q = dict((k,v) for (k,v) in self.query)
+        avg = 0;
+        for (term, freq) in self.query:
+            avg += freq
+        avg /= len(self.query)
         for (term, freq) in new_q:
-            if count >= 10:
-                break
-            else:
-                if term in dict((k,v) for (k,v) in self.query):
-                    continue
-                else:
-                    self.query.append((term, freq))
-                    count += 1
+            if term in dict_q:
+                dict_q[term] += freq
+            elif term not in dict_q and freq > avg:
+                self.query.append((term, freq))
         return self.query
