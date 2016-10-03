@@ -11,95 +11,100 @@ class query_form(object):
         self.non_relevant_set = set()
         self.query = query
         self.alpha = 1
-        self.beta = 1
-        self.gamma = 1
+        self.beta = 0.75
+        self.gamma = 0.3
         f = open('stopwords.txt', 'r')
         self.stop_words = set()
         for word in f.read().split():
             self.stop_words.add(word)
-    
 
     def add_relevant_doc(self, doc):
         self.relevant_set.add(doc)
-    
 
     def add_non_relevant_doc(self, doc):
         self.non_relevant_set.add(doc)
 
     def form_query(self):
-        vectors = []
-        df = {}
+        vectors = {}
         total_tf = {}
         N = 10
 
-        docs = self.relevant_set.union(self.non_relevant_set)
-
-        # count the frequency of each term
-        for d in docs:
-            d = re.sub('[^a-z\ \']+', " ", d)
-            doc = set(d.lower().split()) - self.stop_words
-            tf = {}
-            cnt = 1;
-            if d in self.non_relevant_set:
-                cnt = -1;
-
+        #docs = self.relevant_set.union(self.non_relevant_set)
+        tf_r = {}
+        tf_nr = {}
+        df_r = {}
+        df_nr = {}
+        # count the frequency of each term in relevant docs
+        for d in self.relevant_set:
+            d = re.sub('[^a-z\']+', ' ', d.lower())
+            doc = set(d.split()) - self.stop_words
             for term in doc:
-                if term in tf:
-                    tf[term] += cnt
+                if term in tf_r:
+                    tf_r[term] += 1
                 else:
-                    tf[term] = cnt
+                    tf_r[term] = 1
                 if term in total_tf:
                     total_tf[term] += 1
                 else:
                     total_tf[term] = 1
-            vectors.append(tf)
-
-        print 'term frequency : '
-        pprint.pprint(vectors)
-        print ''
-        # calculate tf_ij and idf
-        for vector in vectors:
-            for (k, v) in vector.items():
-                vector[k] = float(vector[k]) / total_tf[k]
-                if k in df:
-                    df[k] += 1
+                if term in df_r:
+                    df_r[term] += 1
                 else:
-                    df[k] = 1
+                    df_r[term] = 1
 
-        print 'normalized term frequency :'
-        pprint.pprint(vectors)
-        print ''
-        # calculate w_ij
-        for vector in vectors:
-            for (k, v) in vector.items():
-                vector[k] *= math.log(float(N) / df[k], N)
+        # count the frequency of each term in irrelevant docs
+        for d in self.non_relevant_set:
+            d = re.sub('[^a-z\']+', ' ', d.lower())
+            doc = set(d.split()) - self.stop_words
 
-        print 'tf-idf weights : '
-        pprint.pprint(vectors)
-        print ''
-
-        q = {}
-
-        for vector in vectors:
-            for (term, freq) in vector.items():
-                if freq < 0:
-                    temp = self.gamma * vector[term]
+            for term in doc:
+                if term in tf_nr:
+                    tf_nr[term] += 1
                 else:
-                    temp = self.beta * vector[term]
-                if term in q:
-                    q[term] += temp
+                    tf_nr[term] = 1
+                if term in total_tf:
+                    total_tf[term] += 1
                 else:
-                    q[term] = temp
-        
+                    total_tf[term] = 1
+                if term in df_nr:
+                    df_nr[term] += 1
+                else:
+                    df_nr[term] = 1
+
+        pprint.pprint(tf_r)
+        pprint.pprint(tf_nr)
+        pprint.pprint(df_r)
+        pprint.pprint(df_nr)
+        print ''
+
+        # calculate tf_ij
+        for (term, freq) in total_tf.items():
+            vectors[term] = 0.0
+
         for (term, freq) in self.query:
-            q[term] = (self.alpha * freq)
+            vectors[term] = (self.alpha * freq)
 
-        new_q = {}
-        for (term, freq) in q.items():
-            if freq > 0:
-                new_q[term] = freq
-        self.query = sorted(new_q.items(), key=operator.itemgetter(1), reverse=True)
+        for term in tf_r:
+            vectors[term] += self.beta *(float(tf_r[term]) / total_tf[term])*math.log(float(N) / df_r[term])
 
-        print 'new query : '
-        pprint.pprint(self.query)
+        for term in tf_nr:
+            vectors[term] -= self.gamma * (float(tf_nr[term]) / total_tf[term])*math.log(float(N) / df_nr[term])
+
+        print 'weights :'
+        pprint.pprint(vectors)
+        print ''
+
+        q = {key: vectors[key] for key in vectors if vectors[key] > 0}
+        new_q = sorted(q.items(), key=operator.itemgetter(1), reverse=True)
+        count = 0
+
+        for (term, freq) in new_q:
+            if count >= 10:
+                break
+            else:
+                if term in dict((k,v) for (k,v) in self.query):
+                    continue
+                else:
+                    self.query.append((term, freq))
+                    count += 1
         return self.query

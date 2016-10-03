@@ -3,6 +3,8 @@ import base64
 import sys
 import query_form
 import json
+import pprint
+
 
 def process_raw_query(raw_query):
     temp = raw_query.split();
@@ -17,7 +19,7 @@ def compose_url(query):
     print type(query), query
     for (term, freq) in query:
         bing_url += ('%27'+term)
-    bing_url += "%27&$top=10&$format=json"
+    bing_url += '%27&$top=5&$format=json'
     print bing_url
     return bing_url
 
@@ -51,13 +53,15 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = sys.argv[2]
+    raw_query = 'gates'#sys.argv[2]
     query = process_raw_query(raw_query).items()
-    exp_precision = float(sys.argv[1])
+    exp_precision = 0.8#float(sys.argv[1])
     cur_precision = 0.01
     N = 10
 
     while cur_precision< exp_precision and cur_precision != 0:
+        print 'new query : '
+        pprint.pprint(query)
         cur_url = compose_url(query)
         req = urllib2.Request(cur_url, headers=headers)
         resp = urllib2.urlopen(req).read()
@@ -66,10 +70,10 @@ if __name__ == "__main__":
 
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                new_query.add_relevant_doc(row['Description'])
+                new_query.add_relevant_doc(row['Title']+row['Description'])
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(row['Description'])
+                new_query.add_non_relevant_doc(row['Title']+row['Description'])
 
         cur_precision = float(cur_precision)/N
         if cur_precision == 0:
