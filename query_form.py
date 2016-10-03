@@ -27,17 +27,23 @@ class query_form(object):
     def form_query(self):
         vectors = {}
         total_tf = {}
-        #docs = self.relevant_set.union(self.non_relevant_set)
         tf_r = {}
         tf_nr = {}
         df_r = {}
         df_nr = {}
         N = 10
+
         # count the frequency of each term in relevant docs
         for d in self.relevant_set:
             d = re.sub('[^a-z]+', ' ', d.lower()) # need to be discussed
-            doc = set(d.split()) - self.stop_words
-            for term in doc:
+            doc = ''
+            for term in d.split():
+                if term in self.stop_words:
+                    doc += ' '
+                else:
+                    doc += term+' '
+
+            for term in doc.split():
                 if term in tf_r:
                     tf_r[term] += 1
                 else:
@@ -46,6 +52,8 @@ class query_form(object):
                     total_tf[term] += 1
                 else:
                     total_tf[term] = 1
+
+            for term in set(doc.split()):
                 if term in df_r:
                     df_r[term] += 1
                 else:
@@ -54,10 +62,14 @@ class query_form(object):
         # count the frequency of each term in irrelevant docs
         for d in self.non_relevant_set:
             d = re.sub('[^a-z\']+', ' ', d.lower())
-            print d
-            doc = set(d.split()) - self.stop_words
+            doc = ''
+            for term in d.split():
+                if term in self.stop_words:
+                    doc += ' '
+                else:
+                    doc += term + ' '
 
-            for term in doc:
+            for term in doc.split():
                 if term in tf_nr:
                     tf_nr[term] += 1
                 else:
@@ -66,6 +78,7 @@ class query_form(object):
                     total_tf[term] += 1
                 else:
                     total_tf[term] = 1
+            for term in set(doc.split()):
                 if term in df_nr:
                     df_nr[term] += 1
                 else:
@@ -85,10 +98,10 @@ class query_form(object):
             vectors[term] = (self.alpha * freq)
 
         for term in tf_r:
-            vectors[term] += self.beta *(float(tf_r[term]) / total_tf[term])*math.log(float(2*N)/df_r[term])
-
+            vectors[term] += self.beta *(float(tf_r[term]) )*math.log(float(N)/df_r[term])
+#/ total_tf[term]
         for term in tf_nr:
-            vectors[term] -= self.gamma * (float(tf_nr[term]) / total_tf[term])*math.log(float(2*N)/df_nr[term])
+            vectors[term] -= self.gamma * (float(tf_nr[term]) )*math.log(float(N)/df_nr[term])
 
         print 'weights :'
         pprint.pprint(vectors)
@@ -98,13 +111,22 @@ class query_form(object):
         new_q = sorted(q.items(), key=operator.itemgetter(1), reverse=True)
 
         dict_q = dict((k,v) for (k,v) in self.query)
+
+        '''
         avg = 0;
         for (term, freq) in self.query:
             avg += freq
         avg /= len(self.query)
+        '''
+
+        cnt = 0
         for (term, freq) in new_q:
+            if cnt > 2:
+                break;
             if term in dict_q:
                 dict_q[term] += freq
-            elif term not in dict_q and freq > avg:
-                self.query.append((term, freq))
-        return self.query
+            elif term not in dict_q and len(term)<10:
+                dict_q[term] = freq
+                cnt += 1
+
+        return dict_q.items()
