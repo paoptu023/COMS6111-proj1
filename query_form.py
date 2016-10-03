@@ -35,7 +35,7 @@ class query_form(object):
         N = 10
         # count the frequency of each term in relevant docs
         for d in self.relevant_set:
-            d = re.sub('[^a-z\']+', ' ', d.lower())
+            d = re.sub('[^a-z]+', ' ', d.lower()) # need to be discussed
             doc = set(d.split()) - self.stop_words
             for term in doc:
                 if term in tf_r:
@@ -54,6 +54,7 @@ class query_form(object):
         # count the frequency of each term in irrelevant docs
         for d in self.non_relevant_set:
             d = re.sub('[^a-z\']+', ' ', d.lower())
+            print d
             doc = set(d.split()) - self.stop_words
 
             for term in doc:

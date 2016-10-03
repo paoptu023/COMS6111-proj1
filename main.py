@@ -53,16 +53,14 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = 'brin'#sys.argv[2]
+    raw_query = 'brin yevgenia'#sys.argv[2]
     query = process_raw_query(raw_query).items()
     exp_precision = 1#float(sys.argv[1])
     cur_precision = 0.01
-    N = 10
+    N = 5
 
-    while cur_precision != 0:
+    while exp_precision > cur_precision and cur_precision != 0:
         print cur_precision
-        if exp_precision < cur_precision:
-            break;
         print 'new query : '
         pprint.pprint(query)
         cur_url = compose_url(query)
@@ -70,16 +68,13 @@ if __name__ == "__main__":
         resp = urllib2.urlopen(req).read()
         new_query = query_form.query_form(query)
         cur_precision = 0;
-
         for row in get_result(resp):
             if row['Feedback'] == 'y':
                 new_query.add_relevant_doc(row['Title']+row['Description'])
                 cur_precision += 1
             else:
                 new_query.add_non_relevant_doc(row['Title']+row['Description'])
-
         cur_precision = float(cur_precision)/N
-
         if cur_precision == 0:
             break;
         else:
