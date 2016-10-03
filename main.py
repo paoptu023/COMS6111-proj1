@@ -49,7 +49,7 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = sys.argv[2].split()
+    raw_query = sys.argv[2]
     query = process_raw_query(raw_query)
     exp_precision = float(sys.argv[1])
     cur_precision = 0.01

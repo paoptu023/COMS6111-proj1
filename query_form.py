@@ -12,12 +12,17 @@ class query_form(object):
         self.alpha = 1
         self.beta = 1
         self.gamma = 1
+        f = open('stopwords.txt', 'r')
+        self.stop_words = set()
+
+        for word in f.read().split():
+            self.stop_words.add(word)
 
     def add_relevant_doc(self, doc):
-        self.relevant_set.add(doc)
+        self.relevant_set.appedn(doc)
 
     def add_non_relevant_doc(self, doc):
-        self.non_relevant_set.add(doc)
+        self.non_relevant_set.append(doc)
 
     def form_query(self):
         vectors = []
@@ -30,6 +35,7 @@ class query_form(object):
         # count the frequency of each term
         for d in docs:
             doc = d.split()
+            doc = set(doc) - self.stop_words
             tf = {}
             cnt = 1;
             if d in self.non_relevant_set:
