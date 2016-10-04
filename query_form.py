@@ -23,6 +23,30 @@ class query_form(object):
 
     def add_non_relevant_doc(self, doc):
         self.non_relevant_set.add(doc)
+    
+    def add_freq(self, d, t_set, total_set, d_set, w):
+        doc = ''
+        for term in d.split():
+            if term in self.stop_words:
+                doc += ' '
+            else:
+                doc += term + ' '
+    
+        for term in doc.split():
+            if term in t_set:
+                t_set[term] += w
+            else:
+                t_set[term] = w
+            if term in total_set:
+                total_set[term] += w
+            else:
+                total_set[term] = w
+    
+        for term in set(doc.split()):
+            if term in d_set:
+                d_set[term] += w
+            else:
+                d_set[term] = w
 
     def form_query(self):
         vectors = {}
@@ -35,54 +59,17 @@ class query_form(object):
 
         # count the frequency of each term in relevant docs
         for d in self.relevant_set:
-            d = re.sub('[^a-z]+', ' ', d.lower()) # need to be discussed
-            doc = ''
-            for term in d.split():
-                if term in self.stop_words:
-                    doc += ' '
-                else:
-                    doc += term+' '
-
-            for term in doc.split():
-                if term in tf_r:
-                    tf_r[term] += 1
-                else:
-                    tf_r[term] = 1
-                if term in total_tf:
-                    total_tf[term] += 1
-                else:
-                    total_tf[term] = 1
-
-            for term in set(doc.split()):
-                if term in df_r:
-                    df_r[term] += 1
-                else:
-                    df_r[term] = 1
+            title = re.sub('[^a-z]+', ' ', d[0].lower()) # need to be discussed
+            description = re.sub('[^a-z]+', ' ', d[1].lower())
+            self.add_freq(title, tf_r, total_tf, df_r, 2)
+            self.add_freq(description, tf_r, total_tf, df_r, 1)
 
         # count the frequency of each term in irrelevant docs
         for d in self.non_relevant_set:
-            d = re.sub('[^a-z\']+', ' ', d.lower())
-            doc = ''
-            for term in d.split():
-                if term in self.stop_words:
-                    doc += ' '
-                else:
-                    doc += term + ' '
-
-            for term in doc.split():
-                if term in tf_nr:
-                    tf_nr[term] += 1
-                else:
-                    tf_nr[term] = 1
-                if term in total_tf:
-                    total_tf[term] += 1
-                else:
-                    total_tf[term] = 1
-            for term in set(doc.split()):
-                if term in df_nr:
-                    df_nr[term] += 1
-                else:
-                    df_nr[term] = 1
+            title = re.sub('[^a-z]+', ' ', d[0].lower()) # need to be discussed
+            description = re.sub('[^a-z]+', ' ', d[1].lower())
+            self.add_freq(title, tf_nr, total_tf, df_nr, 2)
+            self.add_freq(description, tf_nr, total_tf, df_nr, 1)
 
         pprint.pprint(tf_r)
         pprint.pprint(tf_nr)

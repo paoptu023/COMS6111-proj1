@@ -19,7 +19,7 @@ def compose_url(query):
     print type(query), query
     for (term, freq) in query:
         bing_url += '+'+term
-    bing_url += '%27&$top=5&$format=json'
+    bing_url += '%27&$top=10&$format=json'
     print bing_url
     return bing_url
 
@@ -53,11 +53,11 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = 'brin'#sys.argv[2]
+    raw_query = 'Musk'#sys.argv[2]
     query = process_raw_query(raw_query).items()
     exp_precision = 1#float(sys.argv[1])
     cur_precision = 0.01
-    N = 5
+    N = 10
 
     while exp_precision > cur_precision and cur_precision != 0:
         print cur_precision
@@ -70,10 +70,10 @@ if __name__ == "__main__":
         cur_precision = 0;
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                new_query.add_relevant_doc(row['Title']+row['Description'])
+                new_query.add_relevant_doc((row['Title'], row['Description']))
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(row['Title']+row['Description'])
+                new_query.add_non_relevant_doc((row['Title'], row['Description']))
         cur_precision = float(cur_precision)/N
         if cur_precision == 0:
             break;
