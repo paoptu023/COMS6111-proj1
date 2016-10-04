@@ -30,7 +30,7 @@ class query_form(object):
             if term in self.stop_words:
                 doc += ' '
             else:
-                doc += term + ' '
+                doc += str(term).lower() + ' '
     
         for term in doc.split():
             if term in t_set:
@@ -61,14 +61,14 @@ class query_form(object):
         for d in self.relevant_set:
             title = re.sub('[^a-z]+', ' ', d[0].lower()) # need to be discussed
             description = re.sub('[^a-z]+', ' ', d[1].lower())
-            self.add_freq(title, tf_r, total_tf, df_r, 2)
+            self.add_freq(title, tf_r, total_tf, df_r, 1.5)
             self.add_freq(description, tf_r, total_tf, df_r, 1)
 
         # count the frequency of each term in irrelevant docs
         for d in self.non_relevant_set:
             title = re.sub('[^a-z]+', ' ', d[0].lower()) # need to be discussed
             description = re.sub('[^a-z]+', ' ', d[1].lower())
-            self.add_freq(title, tf_nr, total_tf, df_nr, 2)
+            self.add_freq(title, tf_nr, total_tf, df_nr, 1.5)
             self.add_freq(description, tf_nr, total_tf, df_nr, 1)
 
         pprint.pprint(tf_r)
