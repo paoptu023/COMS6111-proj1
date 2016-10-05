@@ -1,7 +1,9 @@
 import re
 
 class param(object):
-    """docstring for ClassName"""
+    """
+    some commonly used parameters and methods
+    """
 
     stop_words = set()
     alpha = 1
@@ -16,6 +18,7 @@ class param(object):
         for word in f.read().split():
             param.stop_words.add(word)
 
+    # clean the stopwords and parse the string format documents to list format
     @staticmethod
     def parser(docs):
         rst = []

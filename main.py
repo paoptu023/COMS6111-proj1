@@ -84,10 +84,10 @@ def main():
         # classify the result docs
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                helper.add_relevant_doc(row['Title']+row['Description'])
+                helper.add_relevant_doc(row['Title']+' '+row['Description'])
                 cur_precision += 1
             else:
-                helper.add_non_relevant_doc(row['Title']+row['Description'])
+                helper.add_non_relevant_doc(row['Title']+' '+row['Description'])
 
         # calculate the new precision
         cur_precision = float(cur_precision)/parameters.param.num
