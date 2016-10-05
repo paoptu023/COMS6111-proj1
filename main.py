@@ -52,7 +52,7 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = 'musk'#sys.argv[2]
+    raw_query = 'taj mahal'#sys.argv[2]
     query = process_raw_query(raw_query)
     exp_precision = 1#float(sys.argv[1])
     cur_precision = 0.01
@@ -71,10 +71,10 @@ if __name__ == "__main__":
         cur_precision = 0
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                new_query.add_relevant_doc(row['Title'], row['Description'])
+                new_query.add_relevant_doc(row['Title'], row['Description'], row['Url'])
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(row['Title'],row['Description'])
+                new_query.add_non_relevant_doc(row['Title'],row['Description'], row['Url'])
 
         cur_precision = float(cur_precision)/parameters.param.num
 

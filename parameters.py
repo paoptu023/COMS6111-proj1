@@ -1,4 +1,5 @@
 import re
+from urlparse import urlparse
 
 class param(object):
     """docstring for ClassName"""
@@ -8,6 +9,7 @@ class param(object):
     beta = 0.75
     gamma = 0.15
     num = 10
+    url = {}
 
     @staticmethod
     def read_stop_words():
@@ -23,6 +25,21 @@ class param(object):
             temp = []
             for term in d:
                 if term not in param.stop_words:
-                    temp.append(term)
+                    temp.append(str(term))
+            rst.append(temp)
+        return rst
+
+    @staticmethod
+    def parseURL(urls):
+        rst = []
+        for url in urls:
+            path = urlparse(url).path.replace('.html', '')
+            path = ''.join(i for i in path if not i.isdigit())
+            result = path.split('/')[-1] + ' ' + path.split('/')[-2]
+            result = re.sub('[^a-zA-Z0-9\n\.]', ' ', result)
+            temp = []
+            for term in result.lower().split():
+                if term not in param.stop_words:
+                    temp.append(str(term))
             rst.append(temp)
         return rst
