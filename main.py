@@ -7,22 +7,21 @@ import pprint
 import parameters
 
 def process_raw_query(raw_query):
-    temp = raw_query.split()
+    temp = raw_query.lower().split()
     rst = {}
     for term in temp:
         rst[term] = 1
     return rst
 
 
-def compose_url(query):
+def compose_url(query, N):
     bing_url = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27'
     print type(query), query
     for (term, freq) in query.items():
         bing_url += '+'+term
-    bing_url += '%27&$top=5&$format=json'
+    bing_url += '%27&$top=' + str(N) + '&$format=json'
     print bing_url
     return bing_url
-
 
 def get_result(resp):
     # parse response to get all formatted result
@@ -30,6 +29,7 @@ def get_result(resp):
     result_list = json_result['d']['results']
     result = []
     count = 0
+
     for data in result_list:
         row = {}
         count += 1
@@ -52,27 +52,32 @@ if __name__ == "__main__":
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
 
-    raw_query = 'gates'#sys.argv[2]
+    raw_query = 'musk'#sys.argv[2]
     query = process_raw_query(raw_query)
     exp_precision = 1#float(sys.argv[1])
     cur_precision = 0.01
+    parameters.param.read_stop_words()
 
     while exp_precision > cur_precision and cur_precision != 0:
         print cur_precision
         print 'new query : '
         pprint.pprint(query)
-        cur_url = compose_url(query)
+        cur_url = compose_url(query, parameters.param.num)
         req = urllib2.Request(cur_url, headers=headers)
         resp = urllib2.urlopen(req).read()
+
         new_query = query_form.query_form(query)
-        cur_precision = 0;
+
+        cur_precision = 0
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                new_query.add_relevant_doc(row['Title']+row['Description'])
+                new_query.add_relevant_doc(row['Title'], row['Description'])
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(row['Title']+row['Description'])
+                new_query.add_non_relevant_doc(row['Title'],row['Description'])
+
         cur_precision = float(cur_precision)/parameters.param.num
+
         if cur_precision == 0:
             break
         else:

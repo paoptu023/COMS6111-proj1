@@ -7,51 +7,64 @@ class query_form(object):
     """docstring for ClassName"""
 
     def __init__(self, query):
-        self.relevant_set = []
-        self.non_relevant_set = []
+        self.relevant_set_des = []
+        self.non_relevant_set_des = []
+        self.relevant_set_title = []
+        self.non_relevant_set_title = []
         self.query = query
 
+    def add_relevant_doc(self, title, des):
+        self.relevant_set_title.append(title)
+        self.relevant_set_des.append(des)
 
-    def add_relevant_doc(self, doc):
-        self.relevant_set.append(doc)
+    def add_non_relevant_doc(self, title, des):
+        self.non_relevant_set_title.append(title)
+        self.non_relevant_set_des.append(des)
 
-    def add_non_relevant_doc(self, doc):
-        self.non_relevant_set.append(doc)
+    def add_freq(self, docs, tf, w):
+        for doc in docs:
+            for term in doc:
+                if term in tf:
+                    tf[term] += w
+                else:
+                    tf[term] = w
+        return tf
 
     def form_query(self):
         vectors = {}
         tf_r = {}
         tf_nr = {}
         df = {}
-        N = 10
-        docs_r = parameters.param.parser(self.relevant_set)
-        docs_nr = parameters.param.parser(self.non_relevant_set)
-        # count the frequency of each term in relevant docs
 
-        for doc in docs_r:
-            for term in doc:
-                if term in tf_r:
-                    tf_r[term] += 1
-                else:
-                    tf_r[term] = 1
+        des_docs_r = parameters.param.parser(self.relevant_set_des)
+        des_docs_nr = parameters.param.parser(self.non_relevant_set_des)
+        title_docs_r = parameters.param.parser(self.relevant_set_title)
+        title_docs_nr = parameters.param.parser(self.non_relevant_set_title)
 
-        # count the frequency of each term in irrelevant docs
-        for doc in docs_nr:
-            for term in doc:
-                if term in tf_nr:
-                    tf_nr[term] += 1
-                else:
-                    tf_nr[term] = 1
+        # count the frequency of each term in docs
+        self.add_freq(des_docs_r, tf_r, 1)
+        self.add_freq(title_docs_r, tf_r, 1)
+        self.add_freq(des_docs_nr, tf_nr, 1)
+        self.add_freq(title_docs_nr, tf_nr, 1)
 
-        for doc in docs_r+docs_nr:
-            for term in set(doc):
+        for i in range(0, len(des_docs_r)):
+            for term in set(des_docs_r[i]).union(set(title_docs_r[i])):
                 if term in df:
                     df[term] += 1
                 else:
                     df[term] = 1
                     vectors[term] = 0.0
 
-        print self.query
+        for i in range(0, len(des_docs_nr)):
+            for term in set(des_docs_nr[i]).union(set(title_docs_nr[i])):
+                if term in df:
+                    df[term] += 1
+                else:
+                    df[term] = 1
+                    vectors[term] = 0.0
+
+        print 'tf_r', tf_r['elon']
+        print 'df', df['elon']
         # calculate tf_ij
         for (term, freq) in self.query.items():
             vectors[term] = (parameters.param.alpha * freq)
@@ -71,11 +84,9 @@ class query_form(object):
 
         cnt = 0
         for (term, freq) in new_q:
-            if cnt > 2:
-                break;
             if term in self.query:
                 self.query[term] += freq
-            elif term not in self.query and len(term)<10:
+            elif term not in self.query and len(term)<10 and cnt<2:
                 self.query[term] = freq
                 cnt += 1
 
