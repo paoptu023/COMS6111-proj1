@@ -74,7 +74,7 @@ def main():
     # get input precision
     exp_precision = 1 #float(sys.argv[2])
     # parse raw query
-    raw_query = 'taj mahal' #sys.argv[3]
+    raw_query = 'brin' #sys.argv[3]
     query = process_raw_query(raw_query)
 
     cur_precision = 0.01
