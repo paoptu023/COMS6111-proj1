@@ -8,6 +8,7 @@ class param(object):
     beta = 0.75
     gamma = 0.15
     num = 10
+    add_terms = 2
 
     @staticmethod
     def read_stop_words():
