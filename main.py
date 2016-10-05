@@ -1,89 +1,117 @@
 import urllib2
 import base64
 import sys
-import query_form
+import query_processor
 import json
-import pprint
 import parameters
+import re
+from urlparse import urlparse
 
-def process_raw_query(raw_query):
-    temp = raw_query.lower().split()
+
+# parse the initial input query
+def process_raw_query(raw):
+    print 'Parsing the input query ... '
+    temp = raw.lower().split()
     rst = {}
     for term in temp:
         rst[term] = 1
     return rst
 
 
-def compose_url(query, N):
+# compose the query url
+def compose_url(query_dic, n):
+    print 'Composing the query url ... '
     bing_url = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27'
-    print type(query), query
-    for (term, freq) in query.items():
+    for (term, freq) in query_dic.items():
         bing_url += '+'+term
-    bing_url += '%27&$top=' + str(N) + '&$format=json'
-    print bing_url
+    bing_url += '%27&$top=' + str(n) + '&$format=json'
     return bing_url
 
-def get_result(resp):
-    # parse response to get all formatted result
-    json_result = json.loads(resp)
+
+# parse the query response to get formatted results
+def get_result(response):
+    json_result = json.loads(response)
     result_list = json_result['d']['results']
     result = []
     count = 0
-
     for data in result_list:
-        row = {}
+        temp = {}
         count += 1
-        row['Url'] = data['Url']
-        row['Title'] = data['Title']
-        row['Description'] = data['Description']
+        temp['Url'] = data['Url']
+        temp['Title'] = data['Title']
+        temp['Description'] = data['Description']
         print '======================================'
         print 'Result ', count
-        print ' Url          :', row['Url']
-        print ' Title        :', row['Title']
-        print ' Description  :', row['Description']
+        print ' Url          :', temp['Url']
+        print ' Title        :', temp['Title']
+        print ' Description  :', temp['Description']
         print '======================================'
-        row['Feedback'] = raw_input('Relevant (Y/N)?').lower()
-        result.append(row)
+        while 1:
+            fb = raw_input('Relevant (Y/N)?').lower()
+            if fb == 'y' or fb == 'n':
+                temp['Feedback'] = fb
+                break
+            else:
+                print 'Please input Y/N to indicate the relevance'
+        result.append(temp)
     return result
 
-if __name__ == "__main__":
 
-    accountKey = 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI'
-    accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
-    headers = {'Authorization': 'Basic ' + accountKeyEnc}
+def parseURL(url):
+    path = urlparse(url).path.replace('.html', '')
+    path = ''.join(i for i in path if not i.isdigit())
+    result = path.split('/')[-1] + ' ' + path.split('/')[-2]
+    result = re.sub('[^a-zA-Z0-9\n\.]', ' ', result)
+    return result
 
-    raw_query = 'taj mahal'#sys.argv[2]
+
+def main():
+    # parse accountKey
+    account_key = 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' #sys.argv[1]
+    account_key_encry = base64.b64encode(account_key + ':' + account_key)
+    headers = {'Authorization': 'Basic ' + account_key_encry}
+
+    # get input precision
+    exp_precision = 1 #float(sys.argv[2])
+    # parse raw query
+    raw_query = 'taj mahal' #sys.argv[3]
     query = process_raw_query(raw_query)
-    exp_precision = 1#float(sys.argv[1])
+
     cur_precision = 0.01
     parameters.param.read_stop_words()
 
     while exp_precision > cur_precision and cur_precision != 0:
-        print cur_precision
-        print 'new query : '
-        pprint.pprint(query)
+        # query bing to get results
         cur_url = compose_url(query, parameters.param.num)
         req = urllib2.Request(cur_url, headers=headers)
         resp = urllib2.urlopen(req).read()
 
-        new_query = query_form.query_form(query)
-
+        # form new query process object and initialize the relative parameters
+        helper = query_processor.processor(query)
         cur_precision = 0
+
+        # classify the result docs
         for row in get_result(resp):
             if row['Feedback'] == 'y':
-                new_query.add_relevant_doc(row['Title'], row['Description'], row['Url'])
+                helper.add_relevant_doc(row['Title'] + ' ' + row['Description'] + ' ' + parseURL(row['Url']))
                 cur_precision += 1
             else:
-                new_query.add_non_relevant_doc(row['Title'],row['Description'], row['Url'])
+                helper.add_non_relevant_doc(row['Title'] + ' ' + row['Description'] + ' ' + parseURL(row['Url']))
 
+        # calculate the new precision
         cur_precision = float(cur_precision)/parameters.param.num
+        print 'Current precision of relevance is : ',cur_precision
 
+        #
         if cur_precision == 0:
-            break
+            sys.exit('Opps, none relevant docs found, consider another query')
         else:
-            query = new_query.form_query()
+            query = helper.form_query()
 
-    if cur_precision == 0:
-        print 'Opps, something went wrong, consider another query'
-    else:
-        print 'Achieved the required precision'
+    # the program terminates when no relevant doc found or achieve the expected precision
+    print 'Achieved the required precision'
+    exit()
+
+# entrance of the program
+if __name__ == "__main__":
+    main()
