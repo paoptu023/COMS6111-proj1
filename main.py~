@@ -69,7 +69,7 @@ def parseURL(url):
 
 def main():
     # parse accountKey
-    account_key = sys.argv[1]
+    account_key = #sys.argv[1]
     account_key_encry = base64.b64encode(account_key + ':' + account_key)
     headers = {'Authorization': 'Basic ' + account_key_encry}
 
