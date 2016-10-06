@@ -1,6 +1,6 @@
 # COMS E6111 Project 1
 * Group name: Project 1 Group 23
-Qi Wang (qw2197), Yongjia Huo (yh2796)
+ * Qi Wang (qw2197), Yongjia Huo (yh2796)
 
 * Submitted files:
  * main.py – the main program, get relevance feedback
