@@ -5,6 +5,7 @@ import query_processor
 import json
 import parameters
 import re
+import operator
 from urlparse import urlparse
 
 
@@ -57,6 +58,7 @@ def get_result(response):
     return result
 
 
+# parse url, get the last two components, remove digits and special characters
 def parseURL(url):
     path = urlparse(url).path.replace('.html', '')
     path = ''.join(i for i in path if not i.isdigit())
@@ -74,7 +76,7 @@ def main():
     # get input precision
     exp_precision = 1 #float(sys.argv[2])
     # parse raw query
-    raw_query = 'brin' #sys.argv[3]
+    raw_query = 'musk' #sys.argv[3]
     query = process_raw_query(raw_query)
 
     cur_precision = 0.01
@@ -106,7 +108,7 @@ def main():
         if cur_precision == 0:
             sys.exit('Opps, none relevant docs found, consider another query')
         else:
-            query = helper.form_query()
+            tmp = helper.form_query()
 
     # the program terminates when no relevant doc found or achieve the expected precision
     print 'Achieved the required precision'
