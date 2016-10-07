@@ -8,7 +8,7 @@
  * query_processor.py – implement the Rocchio algorithm
  * stopwords.txt – list of stop words
  * transcript.txt
- * readme.pdf
+ * README.md
 
 * Use the following command to run our program:
  * python main.py &lt;account key&gt; &lt;target precision&gt; &lt;initial query&gt;
