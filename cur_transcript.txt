@@ -1,0 +1,582 @@
+Query is: {mahal:1 taj:1 }
+======================================
+Result 1
+Url          : http://www.trumptaj.com/
+Title          : Atlantic City New Jersey Casino Hotels | Trump Taj Mahal ...
+Description          : For five star Atlantic City Casino hotels, Trump Taj Mahal Casino Hotel offers restaurants, nightlife and a casino floor you can't resist.
+======================================
+Feedback: n
+======================================
+Result 2
+Url          : https://en.wikipedia.org/wiki/Taj_Mahal
+Title          : Taj Mahal - Wikipedia, the free encyclopedia
+Description          : Inspiration. The Taj Mahal was commissioned by Shah Jahan in 1631, to be built in the memory of his wife Mumtaz Mahal, a Persian princess who died giving birth to ...
+======================================
+Feedback: n
+======================================
+Result 3
+Url          : https://en.wikipedia.org/wiki/Trump_Taj_Mahal
+Title          : Trump Taj Mahal - Wikipedia, the free encyclopedia
+Description          : The Trump Taj Mahal was a casino and hotel on the Boardwalk in Atlantic City, New Jersey, United States. The casino is owned by Trump Entertainment Resorts ...
+======================================
+Feedback: n
+======================================
+Result 4
+Url          : http://www.history.com/topics/taj-mahal
+Title          : The Taj Mahal - Facts & Summary - HISTORY.com
+Description          : Find out more about the history of The Taj Mahal, including videos, interesting articles, pictures, historical features and more. Get all the facts on HISTORY.com
+======================================
+Feedback: n
+======================================
+Result 5
+Url          : http://www.last.fm/music/Taj+Mahal
+Title          : Taj Mahal — Free listening, videos, concerts, stats and ...
+Description          : Taj Mahal (born Henry Saint Clair Fredericks in New York City on May 17, 1942) is an American Grammy Award-winning blues musician who incorporates elements of world ...
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : http://tajmahal.gov.in/
+Title          : Welcome To Official WebSite of Taj Mahal-U.P.Tourism
+Description          : Official website by Department of Tourism, Government of Uttar Pradesh. Details about Taj Mahal, ticketing, tours, and tourist information.
+======================================
+Feedback: n
+======================================
+Result 7
+Url          : https://taj.tajhotels.com/en-in/taj-mahal-palace-mumbai/#!
+Title          : 5 Star Luxury Hotel in Mumbai - Taj Mahal Palace
+Description          : Taj Mahal Palace, a luxury hotel near Mumbai airport, offers a rich blend of south Indian warmth & elegance. Relax & unwind yourself at Taj Jacuzzi suites & live jazz.
+======================================
+Feedback: n
+======================================
+Result 8
+Url          : http://www.tajblues.com/
+Title          : An International Treasure - Taj Mahal
+Description          : Official site includes news, tour schedule, discography, audio/video and pictures.
+======================================
+Feedback: n
+======================================
+Result 9
+Url          : http://www.trumptaj.com/rooms-suites-en.html
+Title          : Rooms & Suites - Trump Taj Mahal
+Description          : With panoramic ocean views and spectacular sunsets, the Trump Taj Mahal is your Atlantic City oasis. 1,250 deluxe guest rooms and palatial suites epitomize the true ...
+======================================
+Feedback: n
+======================================
+Result 10
+Url          : https://www.yahoo.com/news/yellowing-taj-mahal-under-scaffold-mud-pack-105020982.html
+Title          : Yellowing Taj Mahal to go under scaffold for 'mud pack'
+Description          : Agra (India) (AFP) - Scaffolding will cover the Taj Mahal's main dome next year while a "mud pack" is applied to its yellowing marble, authorities said Thursday as ...
+======================================
+Feedback: n
+Current precision of relevance is : 0.100000
+Query is: {born:1.72693881975 mahal:2.0 grammy:1.72693881975 taj:2.0 }
+======================================
+Result 1
+Url          : https://www.prescottpark.org/event/taj-mahal-0
+Title          : Taj Mahal | Prescott Park Arts Festival
+Description          : Two-time Grammy Award-winner Taj Mahal returns to Prescott Park! Born in Harlem and raised in Springfield, MA, Mahal was brought up in a musical household.
+======================================
+Feedback: y
+======================================
+Result 2
+Url          : https://en.wikipedia.org/wiki/Taj_Mahal_(musician)
+Title          : Taj Mahal (musician) - Wikipedia, the free encyclopedia
+Description          : Henry Saint Clair Fredericks (born May 17, 1942), who uses the stage name Taj Mahal, is an American blues musician. He often incorporates elements of world music into ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://www.last.fm/music/Taj+Mahal
+Title          : Taj Mahal — Free listening, videos, concerts, stats and ...
+Description          : Taj Mahal (born Henry Saint Clair Fredericks in New York City on May 17, 1942) is an American Grammy Award-winning blues musician who incorporates elements of world ...
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : http://www.tajblues.com/biography/
+Title          : Biography - Taj Mahal
+Description          : He capped the year with “An Evening with Taj Mahal” at the Grammy ... “Taj Mahal has ... The parents of Harlem born Henry St. Claire Fredericks, Jr. (Mahal’s ...
+======================================
+Feedback: y
+======================================
+Result 5
+Url          : http://www.famousbirthdays.com/people/taj-mahal.html
+Title          : Taj Mahal - Bio, Facts, Family | Famous Birthdays
+Description          : Learn about Taj Mahal: his birthday, what he did before fame, his family life, fun trivia facts, popularity rankings, and more.
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : http://www.youtube.com/watch?v=SsvOPqAu6uY
+Title          : Taj Mahal - Irresistible You - YouTube
+Description          : 1997 CD Senor Blues, Irresistible You, Taj Mahal (born Henry St. Clair Fredericks) Senor Blues won Best Contemporary Blues Recording at that year's Grammy ...
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : https://www.ravinia.org/ShowDetails/?show=106
+Title          : BonTaj Roulet: Bonnie Raitt & Taj Mahal - ravinia.org
+Description          : About The Artist. TAJ MAHAL. Composer, multi-instrumentalist, vocalist and nine-time Grammy nominee Taj Mahal is an influential figure in late-20th-century blues and ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.allmusic.com/artist/taj-mahal-mn0000790604/awards
+Title          : Taj Mahal | Awards | AllMusic
+Description          : Find Taj Mahal award information on AllMusic. Find Taj Mahal award information on AllMusic ... Born . May 17, 1942 in New York, NY . Genre ...
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : https://itunes.apple.com/us/artist/taj-mahal/id10735
+Title          : Taj Mahal - Download Taj Mahal Music on iTunes - Apple
+Description          : One of the most prominent figures in late 20th century blues, singer/multi-instrumentalist Taj Mahal played an enormous role in revitalizing and preserving ...
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : http://www.biography.com/people/taj-mahal-40448?page=1
+Title          : Taj Mahal - Guitarist, Songwriter, Singer - Biography.com
+Description          : Find out more about acclaimed, Grammy Award-winning blues/world music artist Taj Mahal at Biography.com.
+======================================
+Feedback: y
+Current precision of relevance is : 1.000000
+Achieved the required precision
+
+Query is: {musk:1 }
+======================================
+Result 1
+Url          : https://en.wikipedia.org/wiki/Musk
+Title          : Musk - Wikipedia, the free encyclopedia
+Description          : Musk is a class of aromatic substances commonly used as base notes in perfumery. They include glandular secretions from animals such as the musk deer, numerous plants ...
+======================================
+Feedback: n
+======================================
+Result 2
+Url          : https://en.wikipedia.org/wiki/Elon_Musk
+Title          : Elon Musk - Wikipedia, the free encyclopedia
+Description          : Elon Reeve Musk (/ ˈ iː l ɒ n ˈ m ʌ s k /; born June 28, 1971) is a South African-born Canadian-American business magnate, investor, engineer and ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://www.cnbc.com/elon-musk/
+Title          : Elon Musk - CNBC
+Description          : Wednesday, 28 Sep 2016 | 12:06 PM ET. Astrophysicist Neil deGrasse Tyson, like Elon Musk, says it is highly likely our reality is one big simulation.
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : http://www.dictionary.com/browse/musk
+Title          : Musk | Define Musk at Dictionary.com
+Description          : Musk definition, a substance secreted in a glandular sac under the skin of the abdomen of the male musk deer, having a strong odor, and used in perfumery. See more.
+======================================
+Feedback: n
+======================================
+Result 5
+Url          : http://www.merriam-webster.com/dictionary/musk
+Title          : Musk | Definition of Musk by Merriam-Webster
+Description          : :a strong-smelling material that is used in perfumes and is obtained from a gland of an Asian deer (musk deer) or is prepared artificially
+======================================
+Feedback: n
+======================================
+Result 6
+Url          : http://money.cnn.com/2016/09/30/technology/tesla-elon-musk-discount/index.html
+Title          : Elon Musk to Tesla employees: NEVER discount a car - Sep ...
+Description          : Telsa CEO Elon Musk chided his salespeople for offering discounts to customers, violating the company's strict 'no negotiation, no discount' policy.
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : http://www.foxnews.com/science/2016/09/28/elon-musk-unveils-ambitious-mars-colonization-plan.html
+Title          : Elon Musk unveils ambitious Mars colonization plan | Fox News
+Description          : On Tuesday, SpaceX CEO Elon Musk unveiled plans for a spacecraft and rocket project that intends to put intelligent life on Mars: human life. In a speech ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.nytimes.com/2016/09/28/science/elon-musk-spacex-mars-exploration.html
+Title          : Elon Musk’s Plan: Get Humans to Mars, and Beyond - The New ...
+Description          : SpaceX, Elon Musk’s rocket company, released a video simulation of a journey to Mars. His plan is for spacecraft that would take 100 passengers to the ...
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : http://www.cbsnews.com/news/spacex-elon-musk-unveils-grandiose-plan-to-colonize-mars/
+Title          : SpaceX CEO Elon Musk unveils grandiose plan to colonize ...
+Description          : In a long-awaited presentation Tuesday, SpaceX founder Elon Musk unveiled a grandiose, long-range plan for building reusable super boosters and huge spaceships to ...
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : http://www.nbcnews.com/tech/tech-news/elon-musk-makes-his-case-colonizing-mars-n655641
+Title          : Elon Musk Makes His Case for Colonizing Mars - NBC News
+Description          : If Elon Musk has his way, a ticket to Mars will one day cost the same as the median U.S. house price — about $200,000. Not cheap, but arguably affordable.
+======================================
+Feedback: y
+Current precision of relevance is : 0.700000
+Query is: {musk:2.0 plan:6.32085722271 mars:6.87218048906 }
+======================================
+Result 1
+Url          : http://www.foxnews.com/science/2016/09/28/elon-musk-unveils-ambitious-mars-colonization-plan.html
+Title          : [NEWS] Elon Musk unveils ambitious Mars colonization plan
+Description          : On Tuesday, SpaceX CEO Elon Musk unveiled plans for a spacecraft and rocket project that intends to put intelligent life on Mars: human life. In a speech ...
+======================================
+Feedback: y
+======================================
+Result 2
+Url          : http://www.nytimes.com/2016/09/28/science/elon-musk-spacex-mars-exploration.html
+Title          : Elon Musk’s Plan: Get Humans to Mars, and Beyond - The New ...
+Description          : SpaceX, Elon Musk’s rocket company, released a video simulation of a journey to Mars. His plan is for spacecraft that would take 100 passengers to the ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://money.cnn.com/2016/09/27/technology/spacex-elon-musk-mars-colonization/index.html
+Title          : Elon Musk lays out the plan to put humans on Mars - Sep ...
+Description          : SpaceX CEO Elon Musk laid out his plan to put humans on Mars to eventually form a self-sustaining colony.
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : http://www.cbsnews.com/news/spacex-elon-musk-unveils-grandiose-plan-to-colonize-mars/
+Title          : SpaceX CEO Elon Musk unveils grandiose plan to colonize ...
+Description          : SpaceX founder Elon Musk says he plans to build huge new reusable rockets and spaceships to eventually ferry colonists to Mars
+======================================
+Feedback: y
+======================================
+Result 5
+Url          : http://www.fool.com/investing/2016/10/05/elon-musks-mars-plan-is-much-bigger-than-just-the.aspx
+Title          : Elon Musk's "Mars Plan" Is Much Bigger Than Just the ...
+Description          : Elon Musk's "Mars Plan" Is Much Bigger Than Just the Planet Mars And it will cost more than you think.
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : http://gizmodo.com/this-is-how-elon-musk-plans-to-build-a-city-on-mars-up-1787146547
+Title          : How Elon Musk Plans to Go to Mars - gizmodo.com
+Description          : SpaceX plans to build a “self-sustaining city” on Mars, according to its founder Elon Musk. But, while we now know a lot more about how SpaceX plans to get to ...
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : http://www.reuters.com/article/us-space-musk-idUSKCN11X2DV
+Title          : Billionaire Elon Musk outlines plans for humans to ...
+Description          : Musk outlined his plans for the Mars rocket, capable of carrying 100 passengers plus cargo per voyage, even as SpaceX is still investigating why a different rocket ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.npr.org/sections/thetwo-way/2016/09/27/495622695/this-afternoon-elon-musk-unveils-his-plan-for-colonizing-mars
+Title          : Elon Musk Unveils His Plan For Colonizing Mars : The Two ...
+Description          : Billionaire tech entrepreneur Elon Musk says his space transport company, SpaceX, will build a rocket system capable of taking people to Mars and ...
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : https://www.theguardian.com/technology/2016/sep/27/elon-musk-spacex-mars-colony
+Title          : SpaceX founder Elon Musk plans to get humans to Mars in ...
+Description          : SpaceX founder tells meeting of astronautical experts that his only purpose is to ‘make life interplanetary’, revealing plans for reusable ship to Mars
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : http://www.spacex.com/mars
+Title          : Mars | SpaceX
+Description          : Mars. You are here. Home. Rockets & Spacecraft. Falcon 9; Falcon Heavy; Dragon; Updates. News; Gallery; Launch Manifest; About SpaceX. Company; Careers; Press; Shop ...
+======================================
+Feedback: n
+Current precision of relevance is : 0.900000
+Query is: {musk:5.97550966858 plans:5.1986038542 unveils:5.41787761947 plan:17.6222642771 mars:13.7443609781 }
+======================================
+Result 1
+Url          : http://www.foxnews.com/science/2016/09/28/elon-musk-unveils-ambitious-mars-colonization-plan.html
+Title          : [NEWS] Elon Musk unveils ambitious Mars colonization plan
+Description          : ... SpaceX CEO Elon Musk unveiled plans for a spacecraft and rocket project that ... Elon Musk unveils ambitious Mars colonization plan; See all Trends ...
+======================================
+Feedback: y
+======================================
+Result 2
+Url          : http://www.cbsnews.com/news/spacex-elon-musk-unveils-grandiose-plan-to-colonize-mars/
+Title          : SpaceX CEO Elon Musk unveils grandiose plan to colonize ...
+Description          : SpaceX CEO Elon Musk unveils grandiose plan to colonize Mars. Comment; Share; Tweet Stumble Email In a ... Musk plans to reuse the Mars landers, ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://www.space.com/34210-elon-musk-unveils-spacex-mars-colony-ship.html
+Title          : SpaceX's Elon Musk Unveils Interplanetary Spaceship to ...
+Description          : SpaceX's Elon Musk Unveils Interplanetary Spaceship to ... Now we know how Elon Musk plans to get 1 million people to Mars. ... If all goes according to plan, ...
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : https://www.cnet.com/news/spacex-mars-elon-musk-plans-saturn-v-rocket/
+Title          : Elon Musk unveils epic SpaceX plan to colonize Mars - CNET
+Description          : Elon Musk unveils epic SpaceX plan to colonize Mars. ... But why Mars? Musk says it's better than the "hot acid bath" of Venus, and Mercury is too hot, too.
+======================================
+Feedback: y
+======================================
+Result 5
+Url          : http://time.com/4510653/elon-musk-unveils-plan-to-colonize-mars/
+Title          : Elon Musk Unveils Plan to Colonize Mars - time.com
+Description          : SpaceX founder and CEO Elon Musk unveiled his plans for humans to ... Elon Musk Unveils Plan to Colonize Mars. Sarah ... ship and fuel up for the trip to Mars, ...
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : https://www.washingtonpost.com/news/speaking-of-science/wp/2016/09/28/elon-musk-unveils-mars-colonization-plan-but-dont-pack-your-bags-just-yet/
+Title          : Elon Musk unveils Mars colonization plan, but don’t pack ...
+Description          : Elon Musk unveils Mars colonization plan, ... that just as battle plans rarely survive contact with the ... what he thought about Musk's plan for colonizing Mars.
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : http://www.timesofisrael.com/spacex-ceo-presents-mars-colonization-plans/
+Title          : WATCH: Elon Musk unveils plan for Mars 'city' | The Times ...
+Description          : Elon Musk unveils plan for Mars ‘city ... has announced its own plans to send people to Mars by the 2030s. ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.reuters.com/article/us-space-musk-idUSKCN11X2DV
+Title          : Musk Outlines Plan To Colonize Mars... - reuters.com
+Description          : SpaceX CEO Elon Musk unveils his plans to colonize Mars during the International Astronautical Congress in Guadalajara, Mexico, September 27, 2016. REUTERS/Stringer. 1/8.
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : http://www.npr.org/sections/thetwo-way/2016/09/27/495622695/this-afternoon-elon-musk-unveils-his-plan-for-colonizing-mars
+Title          : Elon Musk Unveils His Plan For Colonizing Mars : The Two ...
+Description          : Elon Musk Unveils His Plan For Colonizing Mars. Facebook; Twitter; Google+; ... Musk described plans to send at least a million humans to Mars and ...
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : http://gizmodo.com/this-is-how-elon-musk-plans-to-build-a-city-on-mars-up-1787146547
+Title          : How Elon Musk Plans to Go to Mars - gizmodo.com
+Description          : SpaceX plans to build a “self-sustaining city” on Mars, according to its founder Elon Musk. ... plans to get to Mars, ... plan is to send their Mars ...
+======================================
+Feedback: y
+Current precision of relevance is : 1.000000
+Achieved the required precision
+
+Query is: {brin:1 }
+======================================
+Result 1
+Url          : http://www.thefreedictionary.com/Brin
+Title          : Brin - definition of brin by The Free Dictionary
+Description          : brin (brɪn) n. 1. (Animals) one of two filaments of silk combined by the silkworm to form a strand of silk. 2. one of the ribs of a fan
+======================================
+Feedback: n
+======================================
+Result 2
+Url          : https://en.wikipedia.org/wiki/Sergey_Brin
+Title          : Sergey Brin - Wikipedia, the free encyclopedia
+Description          : Sergey Mikhaylovich Brin (Russian: Серге́й Миха́йлович Брин; born August 21, 1973) is a Russian-born American computer scientist, internet ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://brin.ai/
+Title          : BRiN - Your Personal Business Advisor
+Description          : Download BRiN today & get instant access to real-time support and hundreds of business education videos. Introducing BRiN - Your Personal Business Advisor.
+======================================
+Feedback: n
+======================================
+Result 4
+Url          : http://www.davidbrin.com/
+Title          : worlds of DAVID BRIN
+Description          : official website of best-selling science fiction writer and futurist DAVID BRIN
+======================================
+Feedback: n
+======================================
+Result 5
+Url          : http://bringlass.com/
+Title          : Minnesota Glass, Minneapolis Glass - Brin Northwestern ...
+Description          : Founded in 1912, Brin Northwestern Glass has nearly a century of experience in residential and commercial glass and glazing in MN and WI.
+======================================
+Feedback: n
+======================================
+Result 6
+Url          : http://science.howstuffworks.com/life/inside-the-mind/human-brain/brain.htm
+Title          : How Your Brain Works | HowStuffWorks
+Description          : How Your Brain Works. by Craig Freudenrich, Ph.D. & Robynne Boyd Science | The Human Brain. NEXT PAGE NEXT . The human nervous system ...
+======================================
+Feedback: n
+======================================
+Result 7
+Url          : http://www.forbes.com/profile/sergey-brin/
+Title          : Sergey Brin - Forbes
+Description          : Sergey Brin runs Alphabet's secretive X division, a key player in the race towards autonomous vehicles and the builder of self-driving cars. X (formerly called ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.mylifetime.com/shows/bring-it
+Title          : Bring It! Full Episodes, Video & More | Lifetime
+Description          : Bring It! Email Updates. Get updates on new episodes, sneak peeks, and more! Please enter a valid email address. By submitting your information, you agree to receive ...
+======================================
+Feedback: n
+======================================
+Result 9
+Url          : https://www.brainpop.com/
+Title          : BrainPOP
+Description          : BrainPOP - Animated Educational Site for Kids - Science, Social Studies, English, Math, Arts & Music, Health, and Technology
+======================================
+Feedback: n
+======================================
+Result 10
+Url          : http://www.webmd.com/brain/picture-of-the-brain
+Title          : Brain (Human Anatomy): Picture, Function, Parts ...
+Description          : WebMD's Brain Anatomy Page provides a detailed diagram and definition of the brain including its function, parts, and conditions that affect it.
+======================================
+Feedback: n
+Current precision of relevance is : 0.200000
+Query is: {sergey:7.24247060595 brin:3.45585302773 born:3.45387763949 }
+======================================
+Result 1
+Url          : https://en.wikipedia.org/wiki/Sergey_Brin
+Title          : Sergey Brin - Wikipedia, the free encyclopedia
+Description          : Sergey Mikhaylovich Brin (Russian: Серге́й Миха́йлович Брин; born August 21, 1973) is a Russian-born American computer scientist, internet ...
+======================================
+Feedback: y
+======================================
+Result 2
+Url          : http://www.bornrich.com/sergey-brin.html
+Title          : Sergey Brin Net Worth - biography, quotes, wiki, assets ...
+Description          : Sergey Brin net worth is estimated at $29.7 billion according to Forbes as of 2015. A native of Russia, Sergey Brin was born in Moscow to Jewish parents, Michael ...
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : http://www.biography.com/people/sergey-brin-12103333
+Title          : Sergey Brin - Engineer, Inventor, Computer Programmer ...
+Description          : Sergey Brin was born on August 21, 1973, in Moscow, Russia. His family emigrated to the United States to escape Jewish persecution in 1979.
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : http://www.imdb.com/name/nm1962236/
+Title          : Sergey Brin - IMDb
+Description          : Sergey Brin, Self: Google and the World Brain. Sergey Brin was born on August 21, 1973 in Moscow, RSFSR, USSR as Sergey Mikhaylovich Brin.
+======================================
+Feedback: y
+======================================
+Result 5
+Url          : https://www.britannica.com/biography/Sergey-Brin
+Title          : Sergey Brin | American entrepreneur | Britannica.com
+Description          : Sergey Brin, (born August 21, 1973, Moscow, Russia, U.S.S.R.) American computer scientist and entrepreneur who created, along with Larry Page, the online search ...
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : https://astrumpeople.com/sergey-brin-biography/
+Title          : Sergey Brin Biography: Success Story of Google Co-Founder
+Description          : Explore Sergey Brin biography. Enjoy reading an amazing success story and history of the Google co-founder.
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : http://www.who2.com/bio/sergey-brin/
+Title          : Sergey Brin biography | birthday, trivia | Russian ...
+Description          : Sergey Brin and his fellow Stanford student Larry Page invented the Internet search engine Google. Sergey Brin’s parents were Russian immigrants; he was six when ...
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.nndb.com/people/826/000044694/
+Title          : Sergey Brin - NNDB
+Description          : Sergey Brin. AKA Sergey Mikhaylovich Brin. Born: 21-Aug-1973 Birthplace: Moscow, Russia. Gender: Male Religion: Jewish Race or Ethnicity: White Sexual orientation ...
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : http://www.forbes.com/profile/sergey-brin/
+Title          : Sergey Brin - Forbes
+Description          : Sergey Brin runs Alphabet's secretive X division, a key player in the race towards autonomous vehicles and the builder of self-driving cars. X (formerly called ...
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : https://en.wikipedia.org/wiki/Larry_Page
+Title          : Larry Page - Wikipedia, the free encyclopedia
+Description          : Lawrence "Larry" Page (born March 26, 1973) is an American computer scientist and an Internet entrepreneur who co-founded Google Inc. with Sergey Brin in 1998.
+======================================
+Feedback: n
+Current precision of relevance is : 0.900000
+Query is: {russian:4.8283137373 sergey:14.4849412119 brin:6.91170605547 biography:4.12330829343 born:8.72679749307 }
+======================================
+Result 1
+Url          : http://www.biography.com/people/sergey-brin-12103333
+Title          : Sergey Brin - Biography.com
+Description          : Sergey Brin is the man who created the world ... Internet entrepreneur and computer scientist Sergey Mikhaylovich Brin was born on August ... Sergey Brin Biography
+======================================
+Feedback: y
+======================================
+Result 2
+Url          : http://www.who2.com/bio/sergey-brin/
+Title          : Sergey Brin biography | birthday, trivia | Russian ...
+Description          : Sergey Brin Biography. ... Sergey Brin’s parents were Russian immigrants; ... a son born in 2008 and a daughter born in 2011.
+======================================
+Feedback: y
+======================================
+Result 3
+Url          : https://en.wikipedia.org/wiki/Sergei_Brin
+Title          : Sergey Brin - Wikipedia, the free encyclopedia
+Description          : Born: Sergey Mikhaylovich Brin Серге́й Миха́йлович ... Sergey Mikhaylovich Brin (Russian: Серге́й Миха́йлович ...
+======================================
+Feedback: y
+======================================
+Result 4
+Url          : http://www.thefamouspeople.com/profiles/sergey-brin-3349.php
+Title          : Sergey Brin Biography - Childhood, Life Achievements ...
+Description          : Sergey Brin Biography. ... Russian SFSR, Soviet Union. father . ... Sergey Brin was born in Moscow to Jewish parents Michael Brin and Eugenia Brin.
+======================================
+Feedback: y
+======================================
+Result 5
+Url          : https://astrumpeople.com/sergey-brin-biography/
+Title          : Sergey Brin Biography: Success Story of Google Co-Founder
+Description          : Explore Sergey Brin biography. ... Sergey Mikhaylovich Brin was born on ... Parents not only helped Sergey to retain the knowledge of Russian language but also ...
+======================================
+Feedback: y
+======================================
+Result 6
+Url          : http://www.in-biography.com/2014/10/biography-sergey-bringoogle-founders.html
+Title          : Biography of Sergey Brin~Google founders ~ Biography
+Description          : Biography of Sergey Brin~Google founders. ... Sergey Mikhailovich Brin (Russian: ... Sergey Mikhailovich Brin was born in Moscow, ...
+======================================
+Feedback: y
+======================================
+Result 7
+Url          : http://www.factmonster.com/biography/var/sergeybrin.html
+Title          : Sergey Brin Biography (Business Personality/Computer ...
+Description          : Biography of Sergey Brin, ... Sergey Brin's parents were Russian immigrants; ... a son born in 2008 and a daughter born in 2011.
+======================================
+Feedback: y
+======================================
+Result 8
+Url          : http://www.redirectify.com/people/sergey-brin.html
+Title          : Sergey Brin • Biography & Facts
+Description          : Sergey Mikhaylovich Brin (Russian: Серге́й Миха́йлович Брин; born August 21, 1973) is an American computer scientist and internet entrepreneur ...
+======================================
+Feedback: y
+======================================
+Result 9
+Url          : http://www.bornrich.com/sergey-brin.html
+Title          : Sergey Brin Net Worth - biography, quotes, wiki, assets ...
+Description          : Sergey Brin net worth is estimated at $29.7 billion ... Sergey Brin was born in Moscow to Jewish ... the group of Russian speaking business ...
+======================================
+Feedback: y
+======================================
+Result 10
+Url          : https://www.jewishvirtuallibrary.org/jsource/biography/sergeybrin.html
+Title          : Sergey Brin | Jewish Virtual Library
+Description          : Sergey Brin ... Sergey Mikhaylovich Brin is a Jewish Russian-American computer scientist most famous for co-founding internet giant Google. ... (born August 21, ...
+======================================
+Feedback: y
+Current precision of relevance is : 1.000000
+Achieved the required precision
+

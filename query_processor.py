@@ -77,3 +77,4 @@ class processor(object):
         reorder_q = sorted(self.query.items(), key=operator.itemgetter(1), reverse=True)
         self.query = {term: score for (term, score) in reorder_q}
         return self.query
+

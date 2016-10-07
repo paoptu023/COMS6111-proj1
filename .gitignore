@@ -1,3 +1,5 @@
+*.pyc
+*.py~
 .idea
-.pyc
-Test.py
+.gitignore
+

@@ -10,6 +10,7 @@ class param(object):
     beta = 0.75
     gamma = 0.15
     num = 10
+    url = {}
     add_terms = 2
 
     @staticmethod
@@ -27,6 +28,6 @@ class param(object):
             temp = []
             for term in d:
                 if term not in param.stop_words:
-                    temp.append(term)
+                    temp.append(str(term))
             rst.append(temp)
         return rst
