@@ -91,10 +91,10 @@ def main():
     parameters.param.read_stop_words()
 
     while exp_precision > cur_precision and cur_precision != 0:
-        print 'Query is: ', query
+        print 'Query is: ', query.keys()
         transcript.write('Query is: {')
         for key, value in query.items():
-            transcript.write('%s:%s ' % (key, value))
+            transcript.write('%s' % key)
             transcript.write('}\n')
 
         # query bing to get results
