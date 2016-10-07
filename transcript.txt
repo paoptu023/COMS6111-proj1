@@ -1,0 +1,490 @@
+Last login: Fri Oct  7 12:52:47 on ttys000
+➜  group23-proj1 python main.py 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' 1.0 'taj mahal'
+Parsing the input query ... 
+ROUND  1
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  mahal taj
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+mahal+taj%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  https://en.wikipedia.org/wiki/Taj_Mahal
+Title          :  Taj Mahal - Wikipedia, the free encyclopedia
+Description    :  The Taj Mahal (/ ˌ t ɑː dʒ m ə ˈ h ɑː l /, more often / ˈ t ɑː ʒ /; Persian for Crown of Palaces) is an ivory-white marble mausoleum on the ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  2
+Url            :  http://www.trumptaj.com/
+Title          :  Atlantic City New Jersey Casino Hotels | Trump Taj Mahal ...
+Description    :  For five star Atlantic City Casino hotels, Trump Taj Mahal Casino Hotel offers restaurants, nightlife and a casino floor you can't resist.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  3
+Url            :  http://www.history.com/topics/taj-mahal
+Title          :  The Taj Mahal - Facts & Summary - HISTORY.com
+Description    :  Find out more about the history of The Taj Mahal, including videos, interesting articles, pictures, historical features and more.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  4
+Url            :  http://tajmahal.gov.in/
+Title          :  Welcome To Official WebSite of Taj Mahal-U.P.Tourism
+Description    :  Official website by Department of Tourism, Government of Uttar Pradesh. Details about Taj Mahal, ticketing, tours, and tourist information.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  5
+Url            :  http://www.tajmahal.com/
+Title          :  Taj Mahal India
+Description    :  Taj Mahal, Taj Mahal history, taj mahal location, pictures, information, taj mahal tours, tickets and packages. Taj Mahal India
+======================================
+Relevant (Y/N)?n
+======================================
+Result  6
+Url            :  https://taj.tajhotels.com/en-in/taj-mahal-palace-mumbai/#!
+Title          :  5 Star Luxury Hotel in Mumbai - Taj Mahal Palace
+Description    :  Taj Mahal Palace, a luxury hotel near Mumbai airport, offers a rich blend of south Indian warmth & elegance. Relax & unwind yourself at Taj Jacuzzi suites & live jazz.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  7
+Url            :  http://www.allmusic.com/artist/taj-mahal-mn0000790604
+Title          :  Taj Mahal | Biography, Albums, Streaming Links | AllMusic
+Description    :  Find Taj Mahal bio, music, credits, awards, & streaming links on AllMusic - A guitarist and singer/songwriter who took an…
+======================================
+Relevant (Y/N)?y
+======================================
+Result  8
+Url            :  http://www.tajblues.com/
+Title          :  An International Treasure - Taj Mahal
+Description    :  Official site includes news, tour schedule, discography, audio/video and pictures.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  9
+Url            :  http://www.trumptaj.com/rooms-suites-en.html
+Title          :  Rooms & Suites - Trump Taj Mahal
+Description    :  With panoramic ocean views and spectacular sunsets, the Trump Taj Mahal is your Atlantic City oasis. 1,250 deluxe guest rooms and palatial suites epitomize the true ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  10
+Url            :  http://www.last.fm/music/Taj+Mahal
+Title          :  Taj Mahal — Free listening, videos, concerts, stats and ...
+Description    :  Taj Mahal (born Henry Saint Clair Fredericks in New York City on May 17, 1942) is an American Grammy Award-winning blues musician who incorporates elements of world ...
+======================================
+Relevant (Y/N)?y
+======================================
+FEEDBACK SUMMARY
+Query :  mahal taj
+Precision : 0.2
+Still below the desired precision of  1.0
+Indexing result ...
+Augmenting by music grammy
+======================================
+
+ROUND  2
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  mahal taj music grammy
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+mahal+taj+music+grammy%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  https://www.grammy.com/news/taj-mahals-world-of-blues
+Title          :  Taj Mahal's World Of Blues | GRAMMY.com
+Description    :  Taj Mahal has been blending world music with blues ever since he started performing more than 50 years ago. The two-time GRAMMY winner developed his own inimitable ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  2
+Url            :  http://www.grammy.com/nominees/search?artist="taj+mahal"
+Title          :  Past Winners Search | GRAMMY.com
+Description    :  Our GRAMMY Search database lets ... Taj Mahal & The ... Content on this site does not reflect an endorsement or recommendation of any artist or music by The ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  3
+Url            :  https://www.prescottpark.org/event/taj-mahal-0
+Title          :  Taj Mahal | Prescott Park Arts Festival
+Description    :  Two-time Grammy Award-winner Taj Mahal returns to Prescott Park! Born in Harlem and raised in Springfield, MA, Mahal was brought up in a musical household.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  4
+Url            :  http://www.allmusic.com/artist/taj-mahal-mn0000790604/awards
+Title          :  Taj Mahal | Awards | AllMusic
+Description    :  Find Taj Mahal award information on AllMusic ... A guitarist and singer/songwriter who took an interest in reviving the rural blues tradition, later extending to ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  5
+Url            :  http://www.mtv.com/artists/taj-mahal/
+Title          :  Taj Mahal | New Music And Songs
+Description    :  Taj Mahal new music, concerts, photos, and official news updates directly from Taj Mahal's Twitter and Facebook.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  6
+Url            :  http://www.last.fm/music/Taj+Mahal
+Title          :  Taj Mahal — Free listening, videos, concerts, stats and ...
+Description    :  Taj Mahal (born Henry Saint Clair Fredericks in New York City on May 17, 1942) is an American Grammy Award-winning blues musician who incorporates elements of world ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  7
+Url            :  http://rockportmusic.org/taj-mahal/
+Title          :  Rockport Music – Taj Mahal
+Description    :  A bonafide blues and rock legend, the inimitable Taj Mahal has been instrumental in preserving and shaping American roots music. With his booming baritone, nimble ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  8
+Url            :  https://en.wikipedia.org/wiki/Taj_Mahal_(musician)
+Title          :  Taj Mahal (musician) - Wikipedia, the free encyclopedia
+Description    :  Henry Saint Clair Fredericks (born May 17, 1942), who uses the stage name Taj Mahal, is an American blues musician. He often incorporates elements of world music into ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  9
+Url            :  http://www.tajblues.com/congratulations-taj-mahal-greg-allman-grammy-nomination/
+Title          :  Congratulations Taj Mahal and Greg Allman for their Grammy ...
+Description    :  Grammy Nomination. BEST AMERICAN ROOTS PERFORMANCE Statesboro Blues Gregg Allman & Taj Mahal. Gregg Allman & Taj Mahal Track from: All My Friends: Celebrating The ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  10
+Url            :  http://www.tajblues.com/discography/
+Title          :  Discography - Taj Mahal
+Description    :  1988 Music for Little People Taj Mahal leads kids through a ... “Shoutin’” netted Taj his second “Grammy for Best Contemporary Blues” Recorded Live at ...
+======================================
+Relevant (Y/N)?y
+Achieved the required precision
+
+➜  group23-proj1 python main.py 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' 1.0 'musk'     
+Parsing the input query ... 
+ROUND  1
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  musk
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+musk%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  https://en.wikipedia.org/wiki/Musk
+Title          :  Musk - Wikipedia, the free encyclopedia
+Description    :  Musk is a class of aromatic substances commonly used as base notes in perfumery. They include glandular secretions from animals such as the musk deer, numerous plants ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  2
+Url            :  https://en.wikipedia.org/wiki/Elon_Musk
+Title          :  Elon Musk - Wikipedia, the free encyclopedia
+Description    :  Elon Reeve Musk (/ ˈ iː l ɒ n ˈ m ʌ s k /; born June 28, 1971) is a South African-born Canadian-American business magnate, investor, engineer and ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  3
+Url            :  http://www.cnbc.com/elon-musk/
+Title          :  Elon Musk - CNBC
+Description    :  Elon Musk, Tesla ... Wednesday, 28 Sep 2016 | 7:46 AM ET. It's a time where people are recognizing the value of science in our lives, says astrophysicist Neil ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  4
+Url            :  http://www.dictionary.com/browse/musk
+Title          :  Musk | Define Musk at Dictionary.com
+Description    :  Musk definition, a substance secreted in a glandular sac under the skin of the abdomen of the male musk deer, having a strong odor, and used in perfumery. See more.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  5
+Url            :  http://www.merriam-webster.com/dictionary/musk
+Title          :  Musk | Definition of Musk by Merriam-Webster
+Description    :  :a strong-smelling material that is used in perfumes and is obtained from a gland of an Asian deer (musk deer) or is prepared artificially
+======================================
+Relevant (Y/N)?n
+======================================
+Result  6
+Url            :  http://money.cnn.com/2016/09/30/technology/tesla-elon-musk-discount/index.html
+Title          :  Elon Musk to Tesla employees: NEVER discount a car - Sep ...
+Description    :  Telsa CEO Elon Musk chided his salespeople for offering discounts to customers, violating the company's strict 'no negotiation, no discount' policy.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  7
+Url            :  http://www.foxnews.com/science/2016/09/28/elon-musk-unveils-ambitious-mars-colonization-plan.html
+Title          :  Elon Musk unveils ambitious Mars colonization plan | Fox News
+Description    :  On Tuesday, SpaceX CEO Elon Musk unveiled plans for a spacecraft and rocket project that intends to put intelligent life on Mars: human life. In a speech ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  8
+Url            :  http://www.nytimes.com/2016/09/28/science/elon-musk-spacex-mars-exploration.html
+Title          :  Elon Musk’s Plan: Get Humans to Mars, and Beyond - The New ...
+Description    :  SpaceX, Elon Musk’s rocket company, released a video simulation of a journey to Mars. His plan is for spacecraft that would take 100 passengers to the ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  9
+Url            :  http://gizmodo.com/is-elon-musks-crazy-mars-plan-even-legal-1787233691
+Title          :  Is Elon Musk's Crazy Mars Plan Even Legal? - Gizmodo
+Description    :  Earlier this week, Elon Musk revealed his plan to make humanity a multi-planetary species by building an express train to Mars. There are a lot of open questions ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  10
+Url            :  http://www.wsj.com/articles/elon-musk-outlines-plans-for-manned-missions-to-mars-1475011627
+Title          :  Elon Musk Outlines Plans for Missions to Mars - WSJ
+Description    :  Elon Musk unveiled his contrarian vision of sending humans to Mars in roughly the next decade and ultimately setting up colonies there, relying on bold moves by ...
+======================================
+Relevant (Y/N)?y
+======================================
+FEEDBACK SUMMARY
+Query :  musk
+Precision : 0.7
+Still below the desired precision of  1.0
+Indexing result ...
+Augmenting by mars elon
+======================================
+
+ROUND  2
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  musk mars elon
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+musk+mars+elon%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  http://money.cnn.com/2016/10/05/technology/boeing-mars-spacex-elon-musk/index.html
+Title          :  Boeing says it will overtake Elon Musk in race to Mars ...
+Description    :  Elon Musk wants to put humans on Mars by 2025, but the Boeing CEO says the first person to arrive on the planet will do so on a Boeing rocket.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  2
+Url            :  http://gizmodo.com/this-is-how-elon-musk-plans-to-build-a-city-on-mars-up-1787146547
+Title          :  How Elon Musk Plans to Go to Mars - gizmodo.com
+Description    :  SpaceX plans to build a “self-sustaining city” on Mars, according to its founder Elon Musk. But, while we now know a lot more about how SpaceX plans to get to ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  3
+Url            :  http://www.nytimes.com/2016/09/28/science/elon-musk-spacex-mars-exploration.html
+Title          :  Elon Musk’s Plan: Get Humans to Mars, and Beyond
+Description    :  SpaceX, Elon Musk’s rocket company, released a video simulation of a journey to Mars. His plan is for spacecraft that would take 100 passengers to the ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  4
+Url            :  http://www.foxnews.com/science/2016/09/28/elon-musk-unveils-ambitious-mars-colonization-plan.html
+Title          :  Elon Musk unveils ambitious Mars colonization plan | Fox News
+Description    :  On Tuesday, SpaceX CEO Elon Musk unveiled plans for a spacecraft and rocket project that intends to put intelligent life on Mars: human life. In a speech ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  5
+Url            :  https://www.theguardian.com/technology/2016/sep/27/elon-musk-spacex-mars-colony
+Title          :  SpaceX founder Elon Musk plans to get humans to Mars in ...
+Description    :  SpaceX founder Elon Musk has outlined his highly ambitious vision for manned missions to Mars, which he said could begin as soon as 2022 – three years ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  6
+Url            :  http://www.wsj.com/articles/elon-musk-outlines-plans-for-manned-missions-to-mars-1475011627
+Title          :  Elon Musk Outlines Plans for Missions to Mars - WSJ
+Description    :  Elon Musk unveiled his contrarian vision of sending humans to Mars in roughly the next decade and ultimately setting up colonies there, relying on bold moves by ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  7
+Url            :  http://mashable.com/2016/09/28/elon-musk-mars-plan-analysis/
+Title          :  Elon Musk: Is his Mars Shot impossible or inspired?
+Description    :  We now know the full extent of SpaceX founder and CEO Elon Musk’s Mars colonization plan and his incredible Interplanetary Transport System.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  8
+Url            :  http://time.com/4510613/elon-musk-mars-colonize/
+Title          :  Can Elon Musk Colonize Mars? - time.com
+Description    :  Elon Musk, the CEO of SpaceX, got his Mars high while delivering a talk at the International Astronautical Congress in Guadalajara, Mexico
+======================================
+Relevant (Y/N)?y
+======================================
+Result  9
+Url            :  https://en.wikipedia.org/wiki/Elon_Musk
+Title          :  Elon Musk - Wikipedia, the free encyclopedia
+Description    :  Elon Reeve Musk June 28, 1971 (age 45) Pretoria, ... Elon Musk: 'I'm planning to retire to Mars', video interview for The Guardian, August 1, 2010;
+======================================
+Relevant (Y/N)?y
+======================================
+Result  10
+Url            :  http://www.cbsnews.com/news/spacex-elon-musk-unveils-grandiose-plan-to-colonize-mars/
+Title          :  SpaceX CEO Elon Musk unveils grandiose plan to colonize ...
+Description    :  SpaceX founder Elon Musk says he plans to build huge new reusable rockets and spaceships to eventually ferry colonists to Mars
+======================================
+Relevant (Y/N)?y
+Achieved the required precision
+
+➜  group23-proj1 python main.py 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' 1.0 'brin'
+Parsing the input query ... 
+ROUND  1
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  brin
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+brin%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  http://www.thefreedictionary.com/Brin
+Title          :  Brin - definition of brin by The Free Dictionary
+Description    :  brin (brɪn) n. 1. (Animals) one of two filaments of silk combined by the silkworm to form a strand of silk. 2. one of the ribs of a fan
+======================================
+Relevant (Y/N)?n
+======================================
+Result  2
+Url            :  https://en.wikipedia.org/wiki/Sergey_Brin
+Title          :  Sergey Brin - Wikipedia, the free encyclopedia
+Description    :  Early life and education. Brin was born in Moscow in the Soviet Union, to Russian Jewish parents, Yevgenia and Mikhail Brin, both graduates of Moscow State ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  3
+Url            :  http://brin.ai/
+Title          :  BRiN - Your Personal Business Advisor
+Description    :  Download BRiN today & get instant access to real-time support and hundreds of business education videos. Introducing BRiN - Your Personal Business Advisor.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  4
+Url            :  http://www.davidbrin.com/
+Title          :  worlds of DAVID BRIN
+Description    :  official website of best-selling science fiction writer and futurist DAVID BRIN
+======================================
+Relevant (Y/N)?n
+======================================
+Result  5
+Url            :  http://science.howstuffworks.com/life/inside-the-mind/human-brain/brain.htm
+Title          :  How Your Brain Works | HowStuffWorks
+Description    :  How Your Brain Works. by Craig Freudenrich, Ph.D. & Robynne Boyd Science | The Human Brain. NEXT PAGE NEXT . The human nervous system ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  6
+Url            :  http://bringlass.com/
+Title          :  Minnesota Glass, Minneapolis Glass - Brin Northwestern ...
+Description    :  Founded in 1912, Brin Northwestern Glass has nearly a century of experience in residential and commercial glass and glazing in MN and WI.
+======================================
+Relevant (Y/N)?n
+======================================
+Result  7
+Url            :  http://www.mylifetime.com/shows/bring-it
+Title          :  Bring It! Full Episodes, Video & More | Lifetime
+Description    :  Bring It! Email Updates. Get updates on new episodes, sneak peeks, and more! Please enter a valid email address. By submitting your information, you agree to receive ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  8
+Url            :  http://www.youtube.com/user/ImmJustBrian
+Title          :  BriN - YouTube
+Description    :  BriN Videos; Playlists; Channels; Discussion; About; Home Trending History Best of YouTube Music Sports Gaming Movies ...
+======================================
+Relevant (Y/N)?n
+======================================
+Result  9
+Url            :  https://www.brainpop.com/
+Title          :  BrainPOP
+Description    :  BrainPOP - Animated Educational Site for Kids - Science, Social Studies, English, Math, Arts & Music, Health, and Technology
+======================================
+Relevant (Y/N)?n
+======================================
+Result  10
+Url            :  http://www.webmd.com/brain/picture-of-the-brain
+Title          :  Brain (Human Anatomy): Picture, Function, Parts ...
+Description    :  WebMD's Brain Anatomy Page provides a detailed diagram and definition of the brain including its function, parts, and conditions that affect it.
+======================================
+Relevant (Y/N)?n
+======================================
+FEEDBACK SUMMARY
+Query :  brin
+Precision : 0.1
+Still below the desired precision of  1.0
+Indexing result ...
+Augmenting by sergey moscow
+======================================
+
+ROUND  2
+Parameters:
+Client key =  HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI
+Query =  sergey moscow brin
+URL :  https://api.datamarket.azure.com/Bing/Search/Web?Query=%27+sergey+moscow+brin%27&$top=10&$format=json
+======================================
+Result  1
+Url            :  https://en.wikipedia.org/wiki/Sergey_Brin
+Title          :  Sergey Brin - Wikipedia, the free encyclopedia
+Description    :  Brin was born in Moscow in the Soviet Union, ... Sergey Brin has also been very involved and deserves many thanks. - Larry Page page cs.stanford.edu
+======================================
+Relevant (Y/N)?y
+======================================
+Result  2
+Url            :  https://plus.google.com/+SergeyBrin/about
+Title          :  Sergey Brin - About - Google+
+Description    :  Sergey Brin - Google - Mountain View, CA - palo alto, ca - college park, md - moscow, ussr - Stanford University
+======================================
+Relevant (Y/N)?y
+======================================
+Result  3
+Url            :  http://www.forbes.com/profile/sergey-brin/
+Title          :  Sergey Brin - Forbes
+Description    :  Sergey Brin runs Alphabet's secretive X division, a key player in the race towards autonomous vehicles and the builder of self-driving cars. X (formerly called ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  4
+Url            :  http://www.biography.com/people/sergey-brin-12103333#!
+Title          :  Sergey Brin - Biography.com
+Description    :  Sergey Brin is the man who created the world's most popular search engine, Google, with Larry Page in 1998. Learn more about his life and career at Biography.com.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  5
+Url            :  http://www.imdb.com/name/nm1962236/
+Title          :  Sergey Brin - IMDb
+Description    :  Sergey Brin, Self: Google and the World Brain. Sergey Brin was born on August 21, 1973 in Moscow, RSFSR, USSR as Sergey Mikhaylovich Brin.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  6
+Url            :  http://www.momentmag.com/the-story-of-sergey-brin/
+Title          :  The Story of Sergey Brin - Moment Magazine
+Description    :  The Story of Sergey Brin - It takes a bit of searching to find Sergey Brin’s office at the Googleplex. Tucked away in a corner of Building #43 on this sprawling ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  7
+Url            :  http://google.wikia.com/wiki/Sergey_Brin
+Title          :  Sergey Brin | Google Wiki | Fandom powered by Wikia
+Description    :  Sergey Mikhaylovich Brin is a Russian-American computer scientist and Internet entrepreneur who, with Larry Page, co-founded Google. Together, Brin and Page own about ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  8
+Url            :  http://research.google.com/pubs/SergeyBrin.html
+Title          :  Sergey Brin - Research at Google
+Description    :  Sergey Brin, a native of Moscow, received a bachelor of science degree with honors in mathematics and computer science from the University of Maryland at ...
+======================================
+Relevant (Y/N)?y
+======================================
+Result  9
+Url            :  https://www.britannica.com/biography/Sergey-Brin
+Title          :  Sergey Brin | American entrepreneur | Britannica.com
+Description    :  American computer scientist and entrepreneur, who, with Sergey Brin, created the online search engine Google, one of the most successful sites on the Internet.
+======================================
+Relevant (Y/N)?y
+======================================
+Result  10
+Url            :  http://russiapedia.rt.com/prominent-russians/business/sergey-brin/
+Title          :  Sergey Brin – Russiapedia Business Prominent Russians
+Description    :  Out of the USSR. Brin was born in Moscow on August 23, 1973 to a Jewish family. Both his parents, Mikhail and Evgenia Brin, are mathematicians who graduated from ...
+======================================
+Relevant (Y/N)?y
+Achieved the required precision
+➜  group23-proj1          

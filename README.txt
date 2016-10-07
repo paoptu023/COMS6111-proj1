@@ -14,7 +14,7 @@
 * Use the following command to run our program:
   python main.py &lt;account key&gt; &lt;target precision&gt; &lt;initial query&gt;
   For example, 
-      python main.py 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' 1 'musk'
+      python main.py 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' 1.0 'musk'
 
 * Description of design:
 
