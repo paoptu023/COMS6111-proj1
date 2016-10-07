@@ -32,7 +32,10 @@ class processor(object):
         tf_r = {}  # term frequency of relevant docs
         tf_nr = {}  # term frequency of non relevant docs
         df = {}  # document frequency
+        Dr = len(self.relevant_set)  # number of relevant docs
+        Dnr = len(self.non_relevant_set)  # number of non relevant docs
 
+        # parse documents
         docs_r = parameters.param.parser(self.relevant_set)
         docs_nr = parameters.param.parser(self.non_relevant_set)
 
@@ -54,10 +57,10 @@ class processor(object):
             vectors[term] = (parameters.param.alpha * freq)
 
         for term in tf_r:
-            vectors[term] += parameters.param.beta *float(tf_r[term])*math.log(float(parameters.param.num)/(df[term]))
+            vectors[term] += parameters.param.beta *float(tf_r[term])*math.log(float(parameters.param.num)/(df[term]))/Dr
 
         for term in tf_nr:
-            vectors[term] -= parameters.param.gamma * float(tf_nr[term])*math.log(float(parameters.param.num)/(df[term]))
+            vectors[term] -= parameters.param.gamma * float(tf_nr[term])*math.log(float(parameters.param.num)/(df[term]))/Dnr
 
         # compose new query
         q = {key: vectors[key] for key in vectors if vectors[key] > 0}
@@ -71,4 +74,6 @@ class processor(object):
                 self.query[term] = freq
                 cnt += 1
 
+        reorder_q = sorted(self.query.items(), key=operator.itemgetter(1), reverse=True)
+        self.query = {term: score for (term, score) in reorder_q}
         return self.query
